@@ -25,16 +25,6 @@
 - 💡 **Interests:** AI agents, distributed systems, intelligent automation
 - 🌍 **Location:** Chongqing, China
 - ⚡ **Fun fact:** The snow leopard is perfectly adapted to high mountains
-
----
-
-## 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SnowLeopard-io&show_icons=true&theme=algolia&count_private=true&hide_border=true" alt="GitHub Stats" style="width: 48%;" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SnowLeopard-io&layout=compact&theme=algolia&hide_border=true" alt="Top Languages" style="width: 48%;" />
-</div>
-
 ---
 
 ## 📈 Activity Graph
