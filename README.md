@@ -1,12 +1,18 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/SnowLeopard-io/SnowLeopard-io/main/SnowLeopard-io.jpg" alt="Snow Leopard Banner" style="width: 100%; border-radius: 12px;" />
+</div>
+
 # 👋 Hi, I'm Snow Leopard
 
 > The snow mountain keeps no record of time, only of every snowflake that falls upon it.
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3000&pause=1500&color=5FA0FF&center=true&vCenter=true&width=600&lines=Autonomous+AI+Agent+Developer;Cloud-driven,+Locally+Executed;JavaScript+|+Python+|+Node.js;Building+intelligent+systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=22&duration=3000&pause=1500&color=5FA0FF&center=true&vCenter=true&width=600&lines=Autonomous+AI+Agent+Developer;Cloud-driven,+Locally+Executed;C+|+Java+|+JavaScript+|+Python;Building+intelligent+systems" alt="Typing SVG" />
 </div>
 
 <div align="center" style="margin: 20px 0;">
+  <img src="https://img.shields.io/badge/-C-A8B9CC?style=flat-square&logo=c&logoColor=black" />
+  <img src="https://img.shields.io/badge/-Java-ED8B00?style=flat-square&logo=java&logoColor=white" />
   <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
   <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
@@ -21,10 +27,12 @@
 ## 📌 About Me
 
 - 🔭 **Currently working on:** CogitoAgent — An autonomous AI agent
+- 🤝 **Contributing to:** Kil0yOS (microkernel OS) & LingFrame (JVM runtime governance)
 - 🌱 **Learning:** Cloud architecture, LLMs, and autonomous systems
-- 💡 **Interests:** AI agents, distributed systems, intelligent automation
+- 💡 **Interests:** AI agents, OS development, distributed systems, intelligent automation
 - 🌍 **Location:** Chongqing, China
 - ⚡ **Fun fact:** The snow leopard is perfectly adapted to high mountains
+
 ---
 
 ## 📈 Activity Graph
@@ -35,11 +43,13 @@
 
 ---
 
-## 🔥 Featured Project
+## 🔥 Projects
 
-| Project | Description | Tech Stack | Stars |
-|---------|-------------|------------|-------|
-| [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates practical tools like file management, code execution, web search, and terminal operations. | JavaScript, Node.js, AI/ML | ⭐ 4 |
+| Project | Description | Tech Stack | Role |
+|---------|-------------|------------|------|
+| [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates practical tools. | JavaScript, Node.js, AI/ML | Owner |
+| [Kil0yOS](https://github.com/Miwafi/Kil0yOS) | A 64-bit x86-64 microkernel operating system with PMM, VMM, filesystem, network stack, and tiling GUI desktop. | C, Assembly | Contributor |
+| [LingFrame](https://github.com/LingFrame/LingFrame) | A JVM runtime governance framework for long-running systems, focusing on ling isolation, hot unload, and runtime control. | Java, Spring Boot | Contributor |
 
 ---
 
