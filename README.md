@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/SnowLeopard-io/SnowLeopard-io/main/SnowLeopard-io.jpg" alt="Snow Leopard Banner" style="width: 100%; border-radius: 12px;" />
+  <img src="https://raw.githubusercontent.com/SnowLeopard-io/SnowLeopard-io/main/SnowLeopard.jpg" alt="Snow Leopard Banner" style="width: 100%; border-radius: 12px;" />
 </div>
 
 # 👋 Hi, I'm Snow Leopard
