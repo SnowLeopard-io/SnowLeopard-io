@@ -26,6 +26,7 @@
 
 ## 📌 About Me
 
+- 🎓 **Student:** Chongqing No.1 High School · Grade 12 Student
 - 🔭 **Currently working on:** CogitoAgent — An autonomous AI agent
 - 🤝 **Contributing to:** Kil0yOS (microkernel OS) & LingFrame (JVM runtime governance)
 - 🌱 **Learning:** Cloud architecture, LLMs, and autonomous systems
@@ -47,7 +48,8 @@
 
 | Project | Description | Tech Stack | Role |
 |---------|-------------|------------|------|
-| [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates practical tools. | JavaScript, Node.js, AI/ML | Owner |
+| [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates 200+ practical tools — secure and privacy-first. | TypeScript, Node.js, Electron, AI/ML | Owner |
+| [NodeVerdict](https://github.com/SnowLeopard-io/NodeVerdict) | A browser-based Node.js diagnostic viewer that consumes TracingChannel native events, analyzes heap snapshots & CPU flame graphs — all processed locally, nothing uploaded. | TypeScript, React, Vite, D3.js | Owner |
 | [Kil0yOS](https://github.com/Miwafi/Kil0yOS) | A 64-bit x86-64 microkernel operating system with PMM, VMM, filesystem, network stack, and tiling GUI desktop. | C, Assembly | Contributor |
 | [LingFrame](https://github.com/LingFrame/LingFrame) | A JVM runtime governance framework for long-running systems, focusing on ling isolation, hot unload, and runtime control. | Java, Spring Boot | Contributor |
 
@@ -65,6 +67,14 @@
   <a href="https://blog.csdn.net/h1486853830" target="_blank">
     <img src="https://img.shields.io/badge/CSDN-h1486853830-FF6B6B?style=for-the-badge&logo=csdn" />
   </a>
+</div>
+
+<div align="center" style="margin-top: 12px;">
+  <a href="mailto:1486853830@qq.com">
+    <img src="https://img.shields.io/badge/Email-1486853830%40qq.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <img src="https://img.shields.io/badge/QQ-1486853830-12B7F5?style=for-the-badge&logo=tencentqq&logoColor=white" />
+  <img src="https://img.shields.io/badge/WeChat-19112913292-07C160?style=for-the-badge&logo=wechat&logoColor=white" />
 </div>
 
 ---
