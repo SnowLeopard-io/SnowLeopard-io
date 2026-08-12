@@ -1,9 +1,9 @@
-import { banner } from './assets'
+import { banner, bannerNarrow } from './assets'
 import type { Content } from './types'
 
 export const en: Content = {
   ui: {
-    nav: { about: 'About', projects: 'Projects', experience: 'Experience', notes: 'Notes' },
+    nav: { about: 'About', projects: 'Projects', experience: 'Experience', notes: 'Notes', writing: 'Writing' },
     langToggleLabel: 'Language',
     langToggleToZh: '中',
     langToggleToEn: 'EN',
@@ -17,7 +17,7 @@ export const en: Content = {
     wordmark: 'SNOW LEOPARD',
     eyebrow: 'Chongqing · China',
     tagline:
-      'The snow mountain keeps no record of time, only of every snowflake that falls upon it.',
+      'Sheathe the edge to read the world; keep the stillness to cross the years.',
     roles: [
       'Autonomous AI Agent Developer',
       'Cloud-driven · Locally Executed',
@@ -25,6 +25,7 @@ export const en: Content = {
       'Building intelligent systems',
     ],
     banner,
+    bannerNarrow,
     email: '1486853830@qq.com',
     links: [
       { label: 'GitHub', href: 'https://github.com/SnowLeopard-io', handle: 'SnowLeopard-io' },
@@ -42,26 +43,33 @@ export const en: Content = {
     heading: 'Building autonomous systems, from the kernel up.',
     lead: `I'm a Grade 12 student at Chongqing No.1 High School who writes software where AI meets systems. I built CogitoAgent — an autonomous AI agent that is cloud-driven for intelligence yet executed locally for privacy — and I contribute to the microkernel OS Kil0yOS and the JVM governance framework LingFrame.`,
     facts: [
-      { icon: '🎓', label: 'Student', value: 'Chongqing No.1 High School · Grade 12' },
-      { icon: '🧩', label: 'Building', value: 'CogitoAgent — an autonomous AI agent' },
-      { icon: '⚙️', label: 'Contributing', value: 'Kil0yOS (microkernel OS) · LingFrame (JVM governance)' },
-      { icon: '🌱', label: 'Learning', value: 'Cloud architecture · LLMs · Autonomous systems' },
-      { icon: '💡', label: 'Interested in', value: 'AI agents · OS development · Distributed systems' },
-      { icon: '📍', label: 'Based in', value: 'Chongqing, China' },
+      { label: 'Student', value: 'Chongqing No.1 High School · Grade 12' },
+      { label: 'Building', value: 'CogitoAgent — an autonomous AI agent' },
+      { label: 'Contributing', value: 'Kil0yOS (microkernel OS) · LingFrame (JVM governance)' },
+      { label: 'Learning', value: 'Cloud architecture · LLMs · Autonomous systems' },
+      { label: 'Interested in', value: 'AI agents · OS development · Distributed systems' },
+      { label: 'Based in', value: 'Chongqing, China' },
     ],
     stackLabel: 'Tech stack',
     stack: [
-      { lang: 'C', note: 'systems' },
-      { lang: 'Java', note: 'runtime' },
-      { lang: 'JavaScript', note: 'web' },
-      { lang: 'TypeScript', note: 'web' },
-      { lang: 'Node.js', note: 'tooling' },
-      { lang: 'Python', note: 'scripting' },
-      { lang: 'AI/ML', note: 'intelligence' },
-      { lang: 'Electron', note: 'desktop' },
-      { lang: 'Git', note: 'version control' },
+      { lang: 'C', note: 'systems', level: 32 },
+      { lang: 'Java', note: 'runtime', level: 30 },
+      { lang: 'JavaScript', note: 'web', level: 88 },
+      { lang: 'TypeScript', note: 'web', level: 90 },
+      { lang: 'Node.js', note: 'tooling', level: 85 },
+      { lang: 'Python', note: 'scripting', level: 30 },
+      { lang: 'AI/ML', note: 'intelligence', level: 75 },
+      { lang: 'Electron', note: 'desktop', level: 78 },
+      { lang: 'Git', note: 'version control', level: 88 },
     ],
   },
+
+  stats: [
+    { key: 'repos', value: 4, label: 'Repositories' },
+    { key: 'stars', value: 0, suffix: '+', label: 'Stars earned' },
+    { key: 'followers', value: 0, label: 'Followers' },
+    { key: 'languages', value: 6, label: 'Languages' },
+  ],
 
   projects: {
     eyebrow: 'Projects',
@@ -105,6 +113,28 @@ export const en: Content = {
         role: 'Contributor',
       },
     ],
+  },
+
+  featured: {
+    eyebrow: 'Flagship project',
+    name: 'CogitoAgent',
+    tagline: 'An autonomous AI agent',
+    summary:
+      'CogitoAgent is an autonomous agent that thinks, plans and acts on its own. It borrows the cloud for intelligence but keeps memory and secrets on your machine — 200+ tools, privacy by architecture, autonomy you can verify.',
+    highlights: [
+      'Cloud-driven intelligence, local execution — your data never leaves the device.',
+      '200+ integrated tools spanning file systems, shells, the web and code.',
+      'Verifiable autonomy: it can show its work, revoke access and forget on command.',
+      'Built with TypeScript, Node.js and Electron for cross-platform desktop.',
+    ],
+    metrics: [
+      { value: '200+', label: 'Integrated tools' },
+      { value: '100%', label: 'Local execution' },
+      { value: '0', label: 'Data leaves device' },
+    ],
+    stack: ['TypeScript', 'Node.js', 'Electron', 'AI/ML'],
+    url: 'https://github.com/SnowLeopard-io/CogitoAgent',
+    cta: 'Explore CogitoAgent',
   },
 
   experience: {
@@ -167,6 +197,46 @@ export const en: Content = {
         index: 'N–004',
         subject: 'Autonomy must be verifiable',
         body: `An agent with 200+ tools should be able to show its work, revoke its access and forget on command. Power without accountability is just a bug.`,
+      },
+    ],
+  },
+
+  writing: {
+    eyebrow: 'Writing',
+    heading: 'Notes from the build',
+    lead: `Long-form thoughts on agents, systems and the discipline of shipping them. (Swap these placeholders for your real CSDN articles.)`,
+    articles: [
+      {
+        title: 'Building CogitoAgent: cloud-driven intelligence, local execution',
+        excerpt:
+          'How I split an autonomous agent into a cloud brain and a local body — and why privacy had to be an architecture, not a setting.',
+        date: '2026',
+        tag: 'AI Agents',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: 'Writing a 64-bit microkernel in C and assembly',
+        excerpt:
+          'Notes from contributing to Kil0yOS: memory management, a VMM, and the brutal discipline of getting the smallest possible thing right.',
+        date: '2026',
+        tag: 'Operating Systems',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: 'Runtime governance for long-running JVMs with LingFrame',
+        excerpt:
+          'Ling isolation, hot unload and runtime control — keeping processes that must never rest from quietly decaying.',
+        date: '2026',
+        tag: 'JVM',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: 'Why privacy is an architecture, not a feature',
+        excerpt:
+          'An argument I keep having with myself, now written down: autonomy without accountability is just a very capable bug.',
+        date: '2026',
+        tag: 'Principles',
+        url: 'https://blog.csdn.net/h1486853830',
       },
     ],
   },

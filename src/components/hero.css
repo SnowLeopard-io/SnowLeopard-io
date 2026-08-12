@@ -181,7 +181,10 @@
   position: relative;
 }
 
-.hero__vista img {
+/* 单张图：宽窗（>900px）显示图1 SnowLeopard.jpg；窄窗（≤900px）由
+   <picture> 的 <source media> 自动换成图2 SnowLeopard2.jpg。
+   切换点与布局堆叠断点一致，随窗口单调切换一次。 */
+.hero__vista-img {
   width: 100%;
   height: clamp(240px, 30vw, 400px);
   object-fit: cover;

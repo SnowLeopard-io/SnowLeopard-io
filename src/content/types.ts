@@ -2,9 +2,9 @@ export type Link = { label: string; href: string; handle: string }
 
 export type Role = 'Owner' | 'Contributor'
 
-export type Fact = { icon: string; label: string; value: string }
+export type Fact = { label: string; value: string }
 
-export type StackItem = { lang: string; note: string }
+export type StackItem = { lang: string; note: string; level: number }
 
 export type ExperienceState = 'active' | 'contribution' | 'upcoming'
 
@@ -28,6 +28,35 @@ export type Project = {
 
 export type Note = { index: string; subject: string; body: string }
 
+export type GitHubMetric = 'repos' | 'stars' | 'followers' | 'languages'
+
+export type StatItem = {
+  key: GitHubMetric
+  value: number
+  suffix?: string
+  label: string
+}
+
+export type FeaturedContent = {
+  eyebrow: string
+  name: string
+  tagline: string
+  summary: string
+  highlights: string[]
+  metrics: { value: string; label: string }[]
+  stack: string[]
+  url: string
+  cta: string
+}
+
+export type WritingArticle = {
+  title: string
+  excerpt: string
+  date: string
+  tag: string
+  url: string
+}
+
 export interface SiteContent {
   handle: string
   name: string
@@ -36,6 +65,7 @@ export interface SiteContent {
   tagline: string
   roles: string[]
   banner: string
+  bannerNarrow: string
   email: string
   links: Link[]
   statusLabel: string
@@ -74,6 +104,13 @@ export interface NotesContent {
   notes: Note[]
 }
 
+export interface WritingContent {
+  eyebrow: string
+  heading: string
+  lead: string
+  articles: WritingArticle[]
+}
+
 export interface ConnectContent {
   eyebrow: string
   title: string
@@ -81,7 +118,7 @@ export interface ConnectContent {
 }
 
 export interface UIContent {
-  nav: { about: string; projects: string; experience: string; notes: string }
+  nav: { about: string; projects: string; experience: string; notes: string; writing: string }
   langToggleLabel: string
   langToggleToZh: string
   langToggleToEn: string
@@ -93,8 +130,11 @@ export interface Content {
   ui: UIContent
   site: SiteContent
   about: AboutContent
+  stats: StatItem[]
   projects: ProjectsContent
+  featured: FeaturedContent
   experience: ExperienceContent
   notes: NotesContent
+  writing: WritingContent
   connect: ConnectContent
 }

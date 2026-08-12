@@ -23,9 +23,7 @@ export function About() {
               data-reveal
               style={{ '--reveal-delay': `${i * 0.06}s` } as CSSProperties}
             >
-              <span className="about__fact-icon" aria-hidden="true">
-                {fact.icon}
-              </span>
+              <span className="about__fact-mark" aria-hidden="true" />
               <div>
                 <p className="about__fact-label">{fact.label}</p>
                 <p className="about__fact-value">{fact.value}</p>
@@ -36,12 +34,17 @@ export function About() {
 
         <div className="about__stack" data-reveal>
           <p className="about__stack-label">{about.stackLabel}</p>
-          <div className="about__chips">
+          <div className="about__skills">
             {about.stack.map((s) => (
-              <span className="chip" key={s.lang} title={s.note}>
-                <span className="route-dot" />
-                {s.lang}
-              </span>
+              <div className="skill" key={s.lang}>
+                <div className="skill__head">
+                  <span className="skill__lang">{s.lang}</span>
+                  <span className="skill__note">{s.note}</span>
+                </div>
+                <div className="skill__track">
+                  <div className="skill__fill" style={{ '--lvl': `${s.level}%` } as CSSProperties} />
+                </div>
+              </div>
             ))}
           </div>
         </div>

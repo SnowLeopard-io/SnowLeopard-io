@@ -1,9 +1,9 @@
-import { banner } from './assets'
+import { banner, bannerNarrow } from './assets'
 import type { Content } from './types'
 
 export const zh: Content = {
   ui: {
-    nav: { about: '关于', projects: '项目', experience: '经历', notes: '想法' },
+    nav: { about: '关于', projects: '项目', experience: '经历', notes: '想法', writing: '文章' },
     langToggleLabel: '语言',
     langToggleToZh: '中',
     langToggleToEn: 'EN',
@@ -16,9 +16,10 @@ export const zh: Content = {
     name: '雪豹',
     wordmark: '雪豹',
     eyebrow: '重庆 · 中国',
-    tagline: '雪山从不记录时间，只记录落在它身上的每一片雪花。',
+    tagline: '敛锋芒以观天地 守沉静而渡流年',
     roles: ['自主 AI 智能体开发者', '云端驱动 · 本地执行', 'C · Java · JavaScript · Python', '构建智能系统'],
     banner,
+    bannerNarrow,
     email: '1486853830@qq.com',
     links: [
       { label: 'GitHub', href: 'https://github.com/SnowLeopard-io', handle: 'SnowLeopard-io' },
@@ -36,26 +37,33 @@ export const zh: Content = {
     heading: '构建自主系统，从内核到云端。',
     lead: `我是重庆市第一中学的高三学生，在 AI 与系统软件的交叉地带写代码。我创建了 CogitoAgent——一个云端驱动智能、本地执行以守护隐私的自主 AI 智能体，同时参与微内核操作系统 Kil0yOS 与 JVM 运行时治理框架 LingFrame 的开发。`,
     facts: [
-      { icon: '🎓', label: '学生', value: '重庆市第一中学 · 高三' },
-      { icon: '🧩', label: '正在构建', value: 'CogitoAgent —— 自主 AI 智能体' },
-      { icon: '⚙️', label: '参与贡献', value: 'Kil0yOS（微内核 OS）· LingFrame（JVM 治理）' },
-      { icon: '🌱', label: '正在学习', value: '云架构 · LLM · 自主系统' },
-      { icon: '💡', label: '感兴趣', value: 'AI 智能体 · 操作系统 · 分布式系统' },
-      { icon: '📍', label: '所在地', value: '中国 · 重庆' },
+      { label: '学生', value: '重庆市第一中学 · 高三' },
+      { label: '正在构建', value: 'CogitoAgent —— 自主 AI 智能体' },
+      { label: '参与贡献', value: 'Kil0yOS（微内核 OS）· LingFrame（JVM 治理）' },
+      { label: '正在学习', value: '云架构 · LLM · 自主系统' },
+      { label: '感兴趣', value: 'AI 智能体 · 操作系统 · 分布式系统' },
+      { label: '所在地', value: '中国 · 重庆' },
     ],
     stackLabel: '技术栈',
     stack: [
-      { lang: 'C', note: '系统' },
-      { lang: 'Java', note: '运行时' },
-      { lang: 'JavaScript', note: 'Web' },
-      { lang: 'TypeScript', note: 'Web' },
-      { lang: 'Node.js', note: '工具链' },
-      { lang: 'Python', note: '脚本' },
-      { lang: 'AI/ML', note: '智能' },
-      { lang: 'Electron', note: '桌面' },
-      { lang: 'Git', note: '版本控制' },
+      { lang: 'C', note: '系统', level: 32 },
+      { lang: 'Java', note: '运行时', level: 30 },
+      { lang: 'JavaScript', note: 'Web', level: 88 },
+      { lang: 'TypeScript', note: 'Web', level: 90 },
+      { lang: 'Node.js', note: '工具链', level: 85 },
+      { lang: 'Python', note: '脚本', level: 30 },
+      { lang: 'AI/ML', note: '智能', level: 75 },
+      { lang: 'Electron', note: '桌面', level: 78 },
+      { lang: 'Git', note: '版本控制', level: 88 },
     ],
   },
+
+  stats: [
+    { key: 'repos', value: 4, label: '开源仓库' },
+    { key: 'stars', value: 0, suffix: '+', label: '获得 Star' },
+    { key: 'followers', value: 0, label: '关注者' },
+    { key: 'languages', value: 6, label: '编程语言' },
+  ],
 
   projects: {
     eyebrow: '项目',
@@ -99,6 +107,28 @@ export const zh: Content = {
         role: 'Contributor',
       },
     ],
+  },
+
+  featured: {
+    eyebrow: '旗舰项目',
+    name: 'CogitoAgent',
+    tagline: '自主 AI 智能体',
+    summary:
+      'CogitoAgent 是一个能自主思考、规划并行动的智能体。它向云端借智力，却把记忆与秘密留在你的机器上——200+ 工具、以架构保障隐私、可验证的自主。',
+    highlights: [
+      '云端驱动智能、本地执行——数据从不离开设备。',
+      '200+ 集成工具，覆盖文件系统、终端、网络与代码。',
+      '可验证的自主：它能展示过程、撤销权限、一声令下遗忘。',
+      '基于 TypeScript、Node.js 与 Electron 构建，跨平台桌面端。',
+    ],
+    metrics: [
+      { value: '200+', label: '集成工具' },
+      { value: '100%', label: '本地执行' },
+      { value: '0', label: '数据离机' },
+    ],
+    stack: ['TypeScript', 'Node.js', 'Electron', 'AI/ML'],
+    url: 'https://github.com/SnowLeopard-io/CogitoAgent',
+    cta: '了解 CogitoAgent',
   },
 
   experience: {
@@ -161,6 +191,46 @@ export const zh: Content = {
         index: 'N–004',
         subject: '自主必须可验证',
         body: `一个集成 200+ 工具的智能体，应当能够展示自己的工作、撤销权限，并在一声令下遗忘。没有问责的权力只是一个 bug。`,
+      },
+    ],
+  },
+
+  writing: {
+    eyebrow: '文章',
+    heading: '构建中的笔记',
+    lead: `关于智能体、系统与把它们真正做出来的纪律的长文思考。（请将这些占位条目替换为你的真实 CSDN 文章。）`,
+    articles: [
+      {
+        title: '构建 CogitoAgent：云端驱动智能，本地执行',
+        excerpt:
+          '我如何把一个自主智能体拆成「云端大脑」与「本地身体」——以及为什么隐私必须是一种架构，而非一项设置。',
+        date: '2026',
+        tag: 'AI 智能体',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: '用 C 与汇编写一个 64 位微内核',
+        excerpt:
+          '参与 Kil0yOS 的笔记：内存管理、VMM，以及把最小的东西做对所需的严苛纪律。',
+        date: '2026',
+        tag: '操作系统',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: '用 LingFrame 治理长期运行的 JVM',
+        excerpt:
+          'ling 隔离、热卸载与运行时控制——让那些永不停止、必须持续运转的进程不至于悄悄腐烂。',
+        date: '2026',
+        tag: 'JVM',
+        url: 'https://blog.csdn.net/h1486853830',
+      },
+      {
+        title: '为什么隐私是一种架构，而非功能',
+        excerpt:
+          '一个我不断与自己争论的观点，如今写下来：没有问责的自主，只是一个能力很强的 bug。',
+        date: '2026',
+        tag: '原则',
+        url: 'https://blog.csdn.net/h1486853830',
       },
     ],
   },

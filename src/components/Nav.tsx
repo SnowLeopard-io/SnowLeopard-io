@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useI18n } from '../i18n/I18nProvider'
+import { useMagnetic } from '../hooks/useMagnetic'
 import './nav.css'
 
-const NAV_KEYS = ['about', 'projects', 'experience', 'notes'] as const
+const NAV_KEYS = ['about', 'projects', 'experience', 'notes', 'writing'] as const
 type NavKey = (typeof NAV_KEYS)[number]
 
 export function Nav() {
   const { t, locale, toggle } = useI18n()
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState<NavKey>('about')
+  const langRef = useMagnetic<HTMLButtonElement>(0.25)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -64,6 +66,7 @@ export function Nav() {
         </nav>
 
         <button
+          ref={langRef}
           className="nav__lang"
           type="button"
           onClick={toggle}

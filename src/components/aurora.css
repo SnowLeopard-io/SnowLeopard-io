@@ -1,0 +1,35 @@
+/* Slow-drifting aurora haze, sitting behind the page content. */
+.aurora {
+  position: fixed;
+  inset: -25% -15%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(70px) saturate(130%);
+  opacity: 0.5;
+  background:
+    radial-gradient(38% 48% at 22% 22%, rgba(61, 126, 221, 0.40), transparent 62%),
+    radial-gradient(34% 44% at 82% 28%, rgba(143, 180, 222, 0.34), transparent 62%),
+    radial-gradient(46% 54% at 52% 82%, rgba(233, 180, 76, 0.16), transparent 60%),
+    radial-gradient(30% 40% at 12% 78%, rgba(61, 126, 221, 0.22), transparent 60%);
+  will-change: transform;
+  animation: aurora-drift 22s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-4%, -3%, 0) scale(1.06) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(5%, 2%, 0) scale(1.14) rotate(1.5deg);
+  }
+  100% {
+    transform: translate3d(-2%, 4%, 0) scale(1.08) rotate(-1.5deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora {
+    animation: none;
+    opacity: 0.4;
+  }
+}

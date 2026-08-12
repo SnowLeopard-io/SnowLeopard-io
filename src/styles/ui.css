@@ -8,7 +8,7 @@
 }
 
 .section {
-  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  padding-block: var(--section-pad);
   scroll-margin-top: calc(var(--nav-h) + 8px);
   position: relative;
 }
@@ -54,6 +54,70 @@
   line-height: 1.18;
   letter-spacing: -0.02em;
   margin-top: 14px;
+  /* Solid fallback — the heading stays readable even if background-clip:text
+     is unsupported (or neutralised by a dark-mode extension), so it can
+     never collapse to transparent and disappear into the background. */
+  color: var(--ink);
+}
+
+/* Shimmer only when background-clip:text is actually supported. */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .section__title {
+    background-image: linear-gradient(
+      100deg,
+      var(--ink) 30%,
+      var(--accent) 50%,
+      var(--ink) 70%
+    );
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: title-shimmer 7s linear infinite;
+  }
+}
+
+@keyframes title-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -20% 0;
+  }
+}
+
+/* Dark-section variant: solid fallback first, gradient only when supported. */
+.section--dark .section__title {
+  color: var(--night-text);
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .section--dark .section__title {
+    background-image: linear-gradient(
+      100deg,
+      var(--night-text) 30%,
+      var(--ice-deep) 50%,
+      var(--night-text) 70%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section__title,
+  .section--dark .section__title {
+    background-image: none;
+    color: var(--ink);
+    -webkit-text-fill-color: currentColor;
+    animation: none;
+  }
+  .section--dark .section__title {
+    color: var(--night-text);
+  }
 }
 
 .section__lead {
@@ -96,4 +160,48 @@
   border-radius: 50%;
   background: var(--ice-deep);
   flex: none;
+}
+
+/* ——— Live cursor spotlight ——— */
+.spotlight {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background: radial-gradient(
+    480px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(143, 180, 222, 0.16),
+    rgba(61, 126, 221, 0.07) 35%,
+    transparent 62%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out);
+}
+html.has-cursor .spotlight {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .spotlight {
+    display: none;
+  }
+}
+
+/* ——— Scroll progress bar ——— */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 100;
+  pointer-events: none;
+}
+.scroll-progress__bar {
+  display: block;
+  height: 100%;
+  width: var(--scroll, 0%);
+  background: linear-gradient(90deg, var(--ice-deep), var(--accent) 55%, var(--leopard));
+  box-shadow: 0 0 10px rgba(61, 126, 221, 0.55);
+  transition: width 0.08s linear;
 }

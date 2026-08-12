@@ -3,7 +3,7 @@
     radial-gradient(140% 120% at 50% 100%, rgba(61, 126, 221, 0.2) 0%, transparent 55%),
     var(--night);
   color: var(--night-text);
-  padding-block: clamp(4.5rem, 9vw, 7rem) 40px;
+  padding-block: var(--section-pad) 40px;
 }
 
 .footer__inner {

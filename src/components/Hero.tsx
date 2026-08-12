@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { useI18n } from '../i18n/I18nProvider'
+import { useMagnetic } from '../hooks/useMagnetic'
 import './hero.css'
 
 function useTypewriter(words: string[]) {
@@ -43,6 +44,8 @@ function useTypewriter(words: string[]) {
 export function Hero() {
   const { t, locale } = useI18n()
   const typed = useTypewriter(t.site.roles)
+  const primaryRef = useMagnetic<HTMLAnchorElement>()
+  const ghostRef = useMagnetic<HTMLAnchorElement>()
 
   return (
     <section className="hero" id="top">
@@ -79,18 +82,23 @@ export function Hero() {
             </div>
 
             <div className="hero__actions" data-reveal style={{ '--reveal-delay': '0.32s' } as CSSProperties}>
-              <a className="btn btn--primary" href="#projects">
+              <a ref={primaryRef} className="btn btn--primary" href="#projects">
                 {t.site.ctaPrimary}
                 <span aria-hidden="true">↓</span>
               </a>
-              <a className="btn btn--ghost" href={t.site.links[0].href} target="_blank" rel="noreferrer">
+              <a ref={ghostRef} className="btn btn--ghost" href={t.site.links[0].href} target="_blank" rel="noreferrer">
                 {t.site.ctaSecondary}
               </a>
             </div>
           </div>
 
           <figure className="hero__vista" data-reveal style={{ '--reveal-delay': '0.2s' } as CSSProperties}>
-            <img src={t.site.banner} alt="" />
+            {/* 宽窗（>900px，图像框为窄侧栏）→ 图1 SnowLeopard.jpg；窄窗（≤900px，图像框为整行宽框）→ 图2 SnowLeopard2.jpg。
+                切换点与布局堆叠断点一致，随窗口压缩单调切换一次，不会反复横跳。 */}
+            <picture>
+              <source media="(max-width: 900px)" srcSet={t.site.bannerNarrow} />
+              <img className="hero__vista-img" src={t.site.banner} alt="" />
+            </picture>
             <figcaption>
               <span className="hero__vista-flag" aria-hidden="true">▲</span>
               SNOW LEOPARD · HIGH-ALTITUDE COMPUTING

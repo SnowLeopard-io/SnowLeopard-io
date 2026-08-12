@@ -15,12 +15,22 @@
   border: 1px solid var(--night-line);
   border-radius: var(--radius-lg);
   padding: 24px;
-  transition: transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition:
+    transform 0.45s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+  will-change: transform;
+}
+
+.note.is-tilting {
+  transition:
+    transform 0.08s linear,
+    border-color 0.3s var(--ease-out);
 }
 
 .note:hover {
-  transform: translateY(-3px);
   border-color: rgba(143, 180, 222, 0.4);
+  transform: perspective(900px) translateY(-3px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
 }
 
 .note__head {

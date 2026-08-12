@@ -16,16 +16,14 @@
   box-shadow: var(--shadow-card);
 }
 
-.about__fact-icon {
-  width: 34px;
-  height: 34px;
+.about__fact-mark {
+  width: 9px;
+  height: 9px;
   flex: none;
-  display: grid;
-  place-items: center;
-  border-radius: 10px;
-  background: var(--mist);
-  border: 1px solid var(--line);
-  font-size: 16px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(61, 126, 221, 0.14);
 }
 
 .about__fact-label {
@@ -61,4 +59,71 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* ——— Skill proficiency ——— */
+.about__skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 28px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skill__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.skill__lang {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.skill__note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.skill__track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--mist);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.skill__fill {
+  width: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--ice-deep), var(--accent));
+  transition: width 1.1s var(--ease-out);
+}
+
+.js .about__stack.is-in .skill__fill {
+  width: var(--lvl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skill__fill {
+    width: var(--lvl);
+    transition: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .about__skills {
+    grid-template-columns: 1fr;
+  }
 }

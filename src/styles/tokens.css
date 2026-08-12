@@ -37,7 +37,15 @@
   --container: 1120px;
   --nav-h: 68px;
   --gutter: clamp(20px, 4vw, 40px);
+  /* Vertical rhythm between sections. Each section carries this on both
+     top and bottom, so the visible gap between two sections is ~2x this. */
+  --section-pad: clamp(3rem, 6vw, 4.5rem);
 
   /* ——— Motion ——— */
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ——— Live cursor / scroll (set by useAmbientMotion) ——— */
+  --mx: 50%;
+  --my: 50%;
+  --scroll: 0%;
 }

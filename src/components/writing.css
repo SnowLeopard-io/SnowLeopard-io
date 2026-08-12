@@ -1,0 +1,86 @@
+/* ——— Writing / articles ——— */
+.section--writing {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(61, 126, 221, 0.16) 0%, transparent 55%),
+    var(--night);
+}
+
+.writing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.writing__card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--night-raised);
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.writing__card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(143, 180, 222, 0.4);
+}
+
+.writing__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.writing__tag {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ice-deep);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(143, 180, 222, 0.28);
+}
+
+.writing__date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--night-soft);
+}
+
+.writing__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--night-text);
+  letter-spacing: -0.01em;
+}
+
+.writing__excerpt {
+  color: var(--night-soft);
+  font-size: 0.9rem;
+  margin-top: 12px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.writing__more {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--ice-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.writing__card:hover .writing__more span {
+  transform: translateX(4px);
+  transition: transform 0.25s var(--ease-out);
+}

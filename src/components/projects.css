@@ -12,16 +12,25 @@
   border-radius: var(--radius-lg);
   padding: 26px;
   box-shadow: var(--shadow-card);
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
   transition:
-    transform 0.3s var(--ease-out),
+    transform 0.45s var(--ease-out),
+    box-shadow 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+  will-change: transform;
+}
+
+.project.is-tilting {
+  transition:
+    transform 0.08s linear,
     box-shadow 0.3s var(--ease-out),
     border-color 0.3s var(--ease-out);
 }
 
 .project:hover {
-  transform: translateY(-4px);
   border-color: var(--line-strong);
   box-shadow: var(--shadow-soft);
+  transform: perspective(900px) translateY(-4px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
 }
 
 .project__top {
