@@ -6,3 +6,4 @@ dist
 !.vscode/extensions.json
 .idea
 *.log
+dist-ci-test/*
