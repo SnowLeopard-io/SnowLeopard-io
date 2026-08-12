@@ -1,18 +1,18 @@
-import { projects } from '../content/projects'
+import { useI18n } from '../i18n/I18nProvider'
 import type { CSSProperties } from 'react'
 import './projects.css'
 
 export function Projects() {
+  const { t } = useI18n()
+  const { eyebrow, heading, lead, projects } = t.projects
+
   return (
     <section className="section" id="projects">
       <div className="container">
         <header className="section__header" data-reveal>
-          <p className="eyebrow">Camp II · 6,400 m — shelters raised on the ridge</p>
-          <h2 className="section__title">The repos are the flags.</h2>
-          <p className="section__lead">
-            Concrete deliverables, each with a link — proof that the climb happened and the code
-            is public.
-          </p>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 className="section__title">{heading}</h2>
+          <p className="section__lead">{lead}</p>
         </header>
 
         <div className="projects">
@@ -28,7 +28,7 @@ export function Projects() {
             >
               <div className="project__top">
                 <span className={`project__role project__role--${p.role.toLowerCase()}`}>
-                  {p.role}
+                  {p.role === 'Owner' ? t.ui.roleOwner : t.ui.roleContributor}
                 </span>
                 <span className="project__repo" aria-label={`Repository ${p.repo}`}>
                   {p.repo}

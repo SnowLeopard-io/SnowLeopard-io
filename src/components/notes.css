@@ -24,9 +24,6 @@
 }
 
 .note__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -35,10 +32,6 @@
 
 .note__index {
   color: var(--ice-deep);
-}
-
-.note__altitude {
-  color: var(--night-soft);
 }
 
 .note__subject {

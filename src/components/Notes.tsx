@@ -1,18 +1,18 @@
-import { notes } from '../content/notes'
+import { useI18n } from '../i18n/I18nProvider'
 import type { CSSProperties } from 'react'
 import './notes.css'
 
 export function Notes() {
+  const { t } = useI18n()
+  const { eyebrow, heading, lead, notes } = t.notes
+
   return (
     <section className="section section--dark section--notes" id="notes">
       <div className="container">
         <header className="section__header" data-reveal>
-          <p className="eyebrow">High Camp · 6,800 m — the field journal</p>
-          <h2 className="section__title">Ideas jotted between snowfalls.</h2>
-          <p className="section__lead">
-            Written for whoever follows the same line up the mountain. Notes are the map of how a
-            mind climbed a problem.
-          </p>
+          <p className="eyebrow">{eyebrow}</p>
+          <h2 className="section__title">{heading}</h2>
+          <p className="section__lead">{lead}</p>
         </header>
 
         <div className="notes">
@@ -25,7 +25,6 @@ export function Notes() {
             >
               <header className="note__head">
                 <span className="note__index">{note.index}</span>
-                <span className="note__altitude">{note.altitude}</span>
               </header>
               <h3 className="note__subject">{note.subject}</h3>
               <p className="note__body">{note.body}</p>

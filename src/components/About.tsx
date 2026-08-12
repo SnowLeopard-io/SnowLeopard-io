@@ -1,13 +1,16 @@
-import { about } from '../content/about'
+import { useI18n } from '../i18n/I18nProvider'
 import type { CSSProperties } from 'react'
 import './about.css'
 
 export function About() {
+  const { t } = useI18n()
+  const about = t.about
+
   return (
     <section className="section" id="about">
       <div className="container">
         <header className="section__header" data-reveal>
-          <p className="eyebrow">{about.kicker}</p>
+          <p className="eyebrow">{about.eyebrow}</p>
           <h2 className="section__title">{about.heading}</h2>
           <p className="section__lead">{about.lead}</p>
         </header>
@@ -32,7 +35,7 @@ export function About() {
         </div>
 
         <div className="about__stack" data-reveal>
-          <p className="about__stack-label">THE TOOLKIT IN THE RUCKSACK</p>
+          <p className="about__stack-label">{about.stackLabel}</p>
           <div className="about__chips">
             {about.stack.map((s) => (
               <span className="chip" key={s.lang} title={s.note}>

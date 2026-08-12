@@ -1,19 +1,14 @@
 import { useEffect, useState } from 'react'
-import { site } from '../content/site'
-import { useElevation, formatElevation } from '../hooks/useElevation'
+import { useI18n } from '../i18n/I18nProvider'
 import './nav.css'
 
-const NAV_LINKS = [
-  { id: 'about', label: 'About' },
-  { id: 'experience', label: 'Expeditions' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'notes', label: 'Field Notes' },
-]
+const NAV_KEYS = ['about', 'projects', 'experience', 'notes'] as const
+type NavKey = (typeof NAV_KEYS)[number]
 
 export function Nav() {
-  const { elevation } = useElevation()
+  const { t, locale, toggle } = useI18n()
   const [scrolled, setScrolled] = useState(false)
-  const [active, setActive] = useState<string>('about')
+  const [active, setActive] = useState<NavKey>('about')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -23,17 +18,16 @@ export function Nav() {
   }, [])
 
   useEffect(() => {
-    const ids = NAV_LINKS.map((l) => l.id)
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id)
+          if (entry.isIntersecting) setActive(entry.target.id as NavKey)
         })
       },
       { rootMargin: '-45% 0px -50% 0px' },
     )
-    ids.forEach((id) => {
-      const el = document.getElementById(id)
+    NAV_KEYS.forEach((key) => {
+      const el = document.getElementById(key)
       if (el) io.observe(el)
     })
     return () => io.disconnect()
@@ -42,7 +36,7 @@ export function Nav() {
   return (
     <header className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
       <div className="container nav__inner">
-        <a className="nav__brand" href="#top" aria-label="Back to top">
+        <a className="nav__brand" href="#top" aria-label={t.site.name}>
           <span className="nav__peak" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
               <path
@@ -54,25 +48,30 @@ export function Nav() {
               />
             </svg>
           </span>
-          <span className="nav__word">{site.wordmark}</span>
+          <span className="nav__word">{t.site.wordmark}</span>
         </a>
 
-        <nav className="nav__links" aria-label="Primary">
-          {NAV_LINKS.map((l) => (
+        <nav className="nav__links" aria-label={t.ui.nav.about}>
+          {NAV_KEYS.map((key) => (
             <a
-              key={l.id}
-              href={`#${l.id}`}
-              className={`nav__link${active === l.id ? ' is-active' : ''}`}
+              key={key}
+              href={`#${key}`}
+              className={`nav__link${active === key ? ' is-active' : ''}`}
             >
-              {l.label}
+              {t.ui.nav[key]}
             </a>
           ))}
         </nav>
 
-        <div className="nav__alt" aria-label={`Current elevation ${formatElevation(elevation)}`}>
-          <span className="nav__alt-label">ELEV</span>
-          <span className="nav__alt-value">{formatElevation(elevation)}</span>
-        </div>
+        <button
+          className="nav__lang"
+          type="button"
+          onClick={toggle}
+          aria-label={`${t.ui.langToggleLabel}: ${locale === 'en' ? t.ui.langToggleToZh : t.ui.langToggleToEn}`}
+          title={locale === 'en' ? t.ui.langToggleToZh : t.ui.langToggleToEn}
+        >
+          {locale === 'en' ? t.ui.langToggleToZh : t.ui.langToggleToEn}
+        </button>
       </div>
     </header>
   )

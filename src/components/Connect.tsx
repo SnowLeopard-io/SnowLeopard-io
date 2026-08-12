@@ -1,27 +1,33 @@
-import { site } from '../content/site'
+import { useI18n } from '../i18n/I18nProvider'
 import './connect.css'
 
-const CONTACTS = [
-  ...site.links.map((l) => ({ ...l, type: 'link' as const })),
-  { label: 'Email', href: `mailto:${site.email}`, handle: site.email, type: 'link' as const },
-  { label: 'QQ', href: null, handle: '1486853830', type: 'plain' as const },
-  { label: 'WeChat', href: null, handle: '19112913292', type: 'plain' as const },
-]
+type Contact = {
+  label: string
+  href: string | null
+  handle: string
+  type: 'link' | 'plain'
+}
 
 export function Connect() {
+  const { t } = useI18n()
+  const contacts: Contact[] = [
+    ...t.site.links.map((l) => ({ label: l.label, href: l.href, handle: l.handle, type: 'link' as const })),
+    { label: 'Email', href: `mailto:${t.site.email}`, handle: t.site.email, type: 'link' as const },
+    { label: 'QQ', href: null, handle: '1486853830', type: 'plain' as const },
+    { label: 'WeChat', href: null, handle: '19112913292', type: 'plain' as const },
+  ]
+
   return (
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__head" data-reveal>
-          <p className="eyebrow">The Summit · 7,546 m — Muztagh Ata</p>
-          <h2 className="footer__title">Every climb ends in a conversation.</h2>
-          <p className="footer__lead">
-            Leave a rope, a flag, or a question. The route is always open.
-          </p>
+          <p className="eyebrow">{t.connect.eyebrow}</p>
+          <h2 className="footer__title">{t.connect.title}</h2>
+          <p className="footer__lead">{t.connect.lead}</p>
         </div>
 
         <div className="footer__contacts" data-reveal>
-          {CONTACTS.map((c) =>
+          {contacts.map((c) =>
             c.type === 'link' && c.href ? (
               <a
                 key={c.label}
@@ -50,10 +56,7 @@ export function Connect() {
             ❄
           </span>
           <span>
-            Built like the snow leopard — adapting and evolving in the high mountains of technology.
-          </span>
-          <span className="footer__copyright">
-            © {new Date().getFullYear()} {site.handle}
+            © {new Date().getFullYear()} {t.site.name} · {t.site.eyebrow}
           </span>
         </p>
       </div>
