@@ -1,0 +1,64 @@
+.about__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.about__fact {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.about__fact-icon {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--mist);
+  border: 1px solid var(--line);
+  font-size: 16px;
+}
+
+.about__fact-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.about__fact-value {
+  font-size: 14.5px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.about__stack {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--line);
+}
+
+.about__stack-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.about__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

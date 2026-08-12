@@ -1,0 +1,99 @@
+/* ——— Shared atoms: container, section, headers, chips, buttons ——— */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  scroll-margin-top: calc(var(--nav-h) + 8px);
+  position: relative;
+}
+
+.section--dark {
+  background: var(--night);
+  color: var(--night-text);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.55;
+}
+
+.section--dark .eyebrow {
+  color: var(--ice-deep);
+}
+
+.section__header {
+  max-width: 620px;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin-top: 14px;
+}
+
+.section__lead {
+  color: var(--ink-soft);
+  margin-top: 14px;
+  font-size: 0.98rem;
+  max-width: 52ch;
+}
+
+.section--dark .section__lead {
+  color: var(--night-soft);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.section--dark .chip {
+  border-color: var(--night-line);
+  background: var(--night-raised);
+  color: var(--night-soft);
+}
+
+/* Route dots used by cards as a "waypoint" marker */
+.route-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ice-deep);
+  flex: none;
+}

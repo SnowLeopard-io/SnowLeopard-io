@@ -1,0 +1,43 @@
+:root {
+  /* ——— Glacier palette ——— */
+  --bg: #f4f6fa;
+  --bg-raised: #ffffff;
+  --mist: #eaf0f7;
+  --line: #e2e9f3;
+  --line-strong: #c9d8ea;
+  --ink: #101a2c;
+  --ink-soft: #5a6b85;
+  --ice: #bfd3ea;
+  --ice-deep: #8fb4de;
+  --accent: #3d7edd;
+  --accent-deep: #2b5fb0;
+  --leopard: #e9b44c;
+
+  /* ——— Alpine night (summit / footer) ——— */
+  --night: #0a1322;
+  --night-raised: #101e38;
+  --night-text: #e9effa;
+  --night-soft: #93a4c2;
+  --night-line: rgba(255, 255, 255, 0.14);
+
+  /* ——— Type ——— */
+  --font-display: 'Unbounded', system-ui, sans-serif;
+  --font-heading: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* ——— Shape & depth ——— */
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-soft: 0 24px 48px -28px rgba(16, 26, 44, 0.3);
+  --shadow-card: 0 2px 0 0 var(--line) inset, 0 18px 36px -30px rgba(16, 26, 44, 0.35);
+
+  /* ——— Layout ——— */
+  --container: 1120px;
+  --nav-h: 68px;
+  --gutter: clamp(20px, 4vw, 40px);
+
+  /* ——— Motion ——— */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

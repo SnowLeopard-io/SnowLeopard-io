@@ -1,0 +1,102 @@
+.footer {
+  background:
+    radial-gradient(140% 120% at 50% 100%, rgba(61, 126, 221, 0.2) 0%, transparent 55%),
+    var(--night);
+  color: var(--night-text);
+  padding-block: clamp(4.5rem, 9vw, 7rem) 40px;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__head {
+  max-width: 640px;
+}
+
+.footer__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin-top: 16px;
+}
+
+.footer__lead {
+  color: var(--night-soft);
+  margin-top: 14px;
+}
+
+.footer__contacts {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  border-top: 1px solid var(--night-line);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-md);
+  background: var(--night-raised);
+  transition: border-color 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+
+.footer__contact--link:hover {
+  border-color: rgba(143, 180, 222, 0.5);
+  transform: translateY(-2px);
+}
+
+.footer__contact-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ice-deep);
+  flex: none;
+}
+
+.footer__contact-handle {
+  font-size: 14px;
+  color: var(--night-text);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer__contact-arrow {
+  margin-left: auto;
+  color: var(--ice-deep);
+  font-family: var(--font-mono);
+}
+
+.footer__note {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: 28px;
+  border-top: 1px solid var(--night-line);
+  color: var(--night-soft);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer__note .footer__snowflake {
+  color: var(--ice-deep);
+}
+
+.footer__copyright {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  font-size: 12px;
+}

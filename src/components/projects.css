@@ -1,0 +1,105 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-soft);
+}
+
+.project__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.project__role {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.project__role--owner {
+  color: var(--ink);
+  background: var(--mist);
+  border: 1px solid var(--line);
+}
+
+.project__role--contributor {
+  color: var(--accent-deep);
+  background: rgba(61, 126, 221, 0.08);
+  border: 1px solid rgba(61, 126, 221, 0.25);
+}
+
+.project__repo {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project__arrow {
+  color: var(--accent);
+  transition: transform 0.25s var(--ease-out);
+}
+
+.project:hover .project__arrow {
+  transform: translate(2px, -2px);
+}
+
+.project__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.project__tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-top: 6px;
+}
+
+.project__body {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin-top: 12px;
+  flex: 1;
+}
+
+.project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}

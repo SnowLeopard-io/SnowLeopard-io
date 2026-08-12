@@ -1,0 +1,57 @@
+.section--notes {
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(61, 126, 221, 0.16) 0%, transparent 55%),
+    var(--night);
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.note {
+  background: var(--night-raised);
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.note:hover {
+  transform: translateY(-3px);
+  border-color: rgba(143, 180, 222, 0.4);
+}
+
+.note__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
+}
+
+.note__index {
+  color: var(--ice-deep);
+}
+
+.note__altitude {
+  color: var(--night-soft);
+}
+
+.note__subject {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--night-text);
+  letter-spacing: -0.01em;
+}
+
+.note__body {
+  color: var(--night-soft);
+  font-size: 0.92rem;
+  margin-top: 10px;
+  line-height: 1.7;
+}
