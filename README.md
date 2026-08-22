@@ -26,13 +26,57 @@
 
 ## 📌 About Me
 
-- 🎓 **Student:** Chongqing No.1 High School · Grade 12 Student
-- 🔭 **Currently working on:** CogitoAgent — An autonomous AI agent
-- 🤝 **Contributing to:** Kil0yOS (microkernel OS) & LingFrame (JVM runtime governance)
-- 🌱 **Learning:** Cloud architecture, LLMs, and autonomous systems
-- 💡 **Interests:** AI agents, OS development, distributed systems, intelligent automation
-- 🌍 **Location:** Chongqing, China
-- ⚡ **Fun fact:** The snow leopard is perfectly adapted to high mountains
+- 🏔️ **Background:** Chongqing, China — building systems infrastructure across compilers, operating systems, and AI
+- 🎓 **Student:** Chongqing No.1 High School · Grade 12
+- 🔭 **Currently building:** [SpecterCore](https://github.com/SnowLeopard-io/SpecterCore) (x86→WASM JIT, browser-based Windows compat layer) · [ErgalicsStudio](https://github.com/SnowLeopard-io/ErgalicsStudio) (WebGPU scientific computing workstation) · [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) (autonomous AI agent)
+- 🤝 **Contributing to:** [Kil0yOS](https://github.com/Miwafi/Kil0yOS) (x86-64 microkernel) · [LingFrame](https://github.com/LingFrame/LingFrame) (JVM runtime governance)
+- 🌱 **Deepening:** Compiler backend design, WebGPU compute pipelines, LLM agent architectures, distributed systems
+- 🎯 **Focus areas:** Browser-based systems infrastructure, low-level software engineering, autonomous agents
+
+---
+
+## 🔧 Technical Capabilities
+
+```
+Layer               | Capabilities
+--------------------|--------------------------------------------------------
+Systems             | x86-64 microkernel (PMM, VMM, filesystem, network stack)
+                    | x86→WASM JIT compilation, PE32/PE32+ loader
+                    | Win32 API bridging via trap-stub IAT rewriting
+                    | Assembly, C, low-level debugging, GDI integration
+
+Browser Infra       | WebGPU/WGSL compute pipeline scheduling
+                    | Rust/WASM native core, sandboxed plugin system
+                    | OPFS, WebUSB, AudioWorklet integration
+                    | Cross-origin isolation (COOP/COEP)
+
+AI & Agents         | Autonomous LLM-powered agents with 200+ tools
+                    | Cloud-driven intelligence, local privacy-first execution
+                    | Verifiable autonomy: tool revocation, forget-on-command
+
+Diagnostics         | Node.js runtime analysis via TracingChannel native events
+                    | Heap snapshot & CPU flame graph visualization
+                    | Browser-based, zero-upload architecture
+```
+
+---
+
+## 🏔️ Technical Philosophy
+
+> **Open source is not a license, it's a belief.**  
+> The best code isn't written — it's grown. Grown through countless eyes reviewing it, forks reshaping it, and refactors refining it. Every fork is a vote of trust, every PR is a conversation. Closed source may win in the short term, but open source wins in the long run.
+
+> **Inclusivity is not a slogan, it's an engineering decision.**  
+> A system that allows only one language, one paradigm, one way of thinking is inherently fragile. Tech stack diversity is not technical debt — it's adaptability. True robustness comes from the collision of diverse perspectives.
+
+> **Technology should liberate, not lock in.**  
+> Every line of code should aim to give its users more control, not less. Privacy, verifiability, portability — these are not features, they're baseline expectations.
+
+> **Sharing knowledge is the best compound interest.**  
+> Every blog post, every README, every answer you write is an investment in the future. I've learned more from the open source community than from any classroom. The way to pay it back is to keep writing, keep sharing, and keep making the path easier for the next developer.
+
+> **Technology should connect, not divide.**  
+> Code doesn't care about borders. A good algorithm runs just as fast in Chongqing as it does in Silicon Valley. The real mission of technology is to enable people from different cultures and backgrounds to collaborate, understand, and create together. World peace isn't just a grand slogan — it starts with every cross-timezone code review, every clear email, and every person willing to say "let me take a look."
 
 ---
 
@@ -48,6 +92,8 @@
 
 | Project | Description | Tech Stack | Role |
 |---------|-------------|------------|------|
+| [SpecterCore](https://github.com/SnowLeopard-io/SpecterCore) | A browser-based Windows compatibility layer that executes unmodified PE32/PE32+ binaries through an x86→WASM JIT, intercepts Win32 API calls via trap-stub IAT rewriting, and bridges them onto browser primitives (OPFS, WebUSB, WebGPU, AudioWorklet). | TypeScript, WebAssembly, WebGPU, React | Owner |
+| [ErgalicsStudio](https://github.com/SnowLeopard-io/ErgalicsStudio) | An in-browser scientific computing workstation — interactive data exploration, GPU compute scheduling via WebGPU/WGSL, and a sandboxed plugin system, all powered by a Rust/WASM core. | TypeScript, Rust, WebGPU, React | Owner |
 | [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates 200+ practical tools — secure and privacy-first. | TypeScript, Node.js, Electron, AI/ML | Owner |
 | [NodeVerdict](https://github.com/SnowLeopard-io/NodeVerdict) | A browser-based Node.js diagnostic viewer that consumes TracingChannel native events, analyzes heap snapshots & CPU flame graphs — all processed locally, nothing uploaded. | TypeScript, React, Vite, D3.js | Owner |
 | [Kil0yOS](https://github.com/Miwafi/Kil0yOS) | A 64-bit x86-64 microkernel operating system with PMM, VMM, filesystem, network stack, and tiling GUI desktop. | C, Assembly | Contributor |

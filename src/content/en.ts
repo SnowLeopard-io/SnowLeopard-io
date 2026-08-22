@@ -40,14 +40,14 @@ export const en: Content = {
 
   about: {
     eyebrow: 'About',
-    heading: 'Building autonomous systems, from the kernel up.',
-    lead: `I'm a Grade 12 student at Chongqing No.1 High School who writes software where AI meets systems. I built CogitoAgent — an autonomous AI agent that is cloud-driven for intelligence yet executed locally for privacy — and I contribute to the microkernel OS Kil0yOS and the JVM governance framework LingFrame.`,
+    heading: 'Building systems infrastructure, from the kernel to the browser.',
+    lead: `I'm a Grade 12 student at Chongqing No.1 High School, building systems infrastructure at the intersection of compilers, operating systems, and AI. I created SpecterCore (a browser-based Windows compatibility layer with an x86→WASM JIT), ErgalicsStudio (a WebGPU-accelerated scientific computing workstation), and CogitoAgent (an autonomous AI agent). I also contribute to the microkernel OS Kil0yOS and the JVM governance framework LingFrame.`,
     facts: [
       { label: 'Student', value: 'Chongqing No.1 High School · Grade 12' },
-      { label: 'Building', value: 'CogitoAgent — an autonomous AI agent' },
+      { label: 'Building', value: 'SpecterCore (x86→WASM compat) · ErgalicsStudio (WebGPU compute) · CogitoAgent (AI agent)' },
       { label: 'Contributing', value: 'Kil0yOS (microkernel OS) · LingFrame (JVM governance)' },
-      { label: 'Learning', value: 'Cloud architecture · LLMs · Autonomous systems' },
-      { label: 'Interested in', value: 'AI agents · OS development · Distributed systems' },
+      { label: 'Deepening', value: 'Compiler backends · WebGPU compute · LLM agents · Distributed systems' },
+      { label: 'Focus areas', value: 'Browser-based systems infra · Low-level software · Autonomous agents' },
       { label: 'Based in', value: 'Chongqing, China' },
     ],
     stackLabel: 'Tech stack',
@@ -65,7 +65,7 @@ export const en: Content = {
   },
 
   stats: [
-    { key: 'repos', value: 4, label: 'Repositories' },
+    { key: 'repos', value: 6, label: 'Repositories' },
     { key: 'stars', value: 0, suffix: '+', label: 'Stars earned' },
     { key: 'followers', value: 0, label: 'Followers' },
     { key: 'languages', value: 6, label: 'Languages' },
@@ -76,6 +76,24 @@ export const en: Content = {
     heading: 'Selected work',
     lead: `Open-source projects I own and contribute to. Each one is a deliberate attempt to build something that lasts.`,
     projects: [
+      {
+        name: 'SpecterCore',
+        repo: 'SpecterCore',
+        url: 'https://github.com/SnowLeopard-io/SpecterCore',
+        tagline: 'Run Windows x86 apps in the browser',
+        body: `A browser-based Windows compatibility layer that executes unmodified PE32/PE32+ binaries through an x86→WASM JIT, intercepts Win32 API calls via trap-stub IAT rewriting, and bridges them onto browser primitives — OPFS for files, WebUSB for devices, WebGPU for graphics, AudioWorklet for audio.`,
+        stack: ['TypeScript', 'WebAssembly', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
+      {
+        name: 'ErgalicsStudio',
+        repo: 'ErgalicsStudio',
+        url: 'https://github.com/SnowLeopard-io/ErgalicsStudio',
+        tagline: 'In-browser scientific computing workstation',
+        body: `A professional scientific computing workstation in the browser — interactive data exploration, GPU compute scheduling via WebGPU/WGSL, and a sandboxed plugin system, all powered by a Rust/WASM core.`,
+        stack: ['TypeScript', 'Rust', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
       {
         name: 'CogitoAgent',
         repo: 'CogitoAgent',

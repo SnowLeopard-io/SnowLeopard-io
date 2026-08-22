@@ -34,14 +34,14 @@ export const zh: Content = {
 
   about: {
     eyebrow: '关于',
-    heading: '构建自主系统，从内核到云端。',
-    lead: `我是重庆市第一中学的高三学生，在 AI 与系统软件的交叉地带写代码。我创建了 CogitoAgent——一个云端驱动智能、本地执行以守护隐私的自主 AI 智能体，同时参与微内核操作系统 Kil0yOS 与 JVM 运行时治理框架 LingFrame 的开发。`,
+    heading: '构建系统基础设施，从内核到浏览器。',
+    lead: `我是重庆市第一中学的高三学生，在编译器、操作系统与 AI 的交汇处构建系统基础设施。我创建了 SpecterCore（基于 x86→WASM JIT 的浏览器内 Windows 兼容层）、ErgalicsStudio（WebGPU 加速的科学计算工作站）和 CogitoAgent（自主 AI 智能体），同时参与微内核操作系统 Kil0yOS 与 JVM 运行时治理框架 LingFrame 的开发。`,
     facts: [
       { label: '学生', value: '重庆市第一中学 · 高三' },
-      { label: '正在构建', value: 'CogitoAgent —— 自主 AI 智能体' },
+      { label: '正在构建', value: 'SpecterCore（x86→WASM 兼容层）· ErgalicsStudio（WebGPU 计算）· CogitoAgent（AI 智能体）' },
       { label: '参与贡献', value: 'Kil0yOS（微内核 OS）· LingFrame（JVM 治理）' },
-      { label: '正在学习', value: '云架构 · LLM · 自主系统' },
-      { label: '感兴趣', value: 'AI 智能体 · 操作系统 · 分布式系统' },
+      { label: '深耕领域', value: '编译器后端 · WebGPU 计算 · LLM 智能体 · 分布式系统' },
+      { label: '专注方向', value: '浏览器端系统基础设施 · 底层软件 · 自主智能体' },
       { label: '所在地', value: '中国 · 重庆' },
     ],
     stackLabel: '技术栈',
@@ -59,7 +59,7 @@ export const zh: Content = {
   },
 
   stats: [
-    { key: 'repos', value: 4, label: '开源仓库' },
+    { key: 'repos', value: 6, label: '开源仓库' },
     { key: 'stars', value: 0, suffix: '+', label: '获得 Star' },
     { key: 'followers', value: 0, label: '关注者' },
     { key: 'languages', value: 6, label: '编程语言' },
@@ -70,6 +70,24 @@ export const zh: Content = {
     heading: '代表性作品',
     lead: `我拥有与参与的开源项目。每一个都是一次刻意的尝试——构建能长久存在的东西。`,
     projects: [
+      {
+        name: 'SpecterCore',
+        repo: 'SpecterCore',
+        url: 'https://github.com/SnowLeopard-io/SpecterCore',
+        tagline: '在浏览器中运行 Windows x86 应用',
+        body: `一个基于浏览器的 Windows 兼容层，通过 x86→WASM JIT 执行未修改的 PE32/PE32+ 二进制文件，通过 trap-stub IAT 重写拦截 Win32 API 调用，并将其桥接到浏览器原生 API——OPFS 做文件系统、WebUSB 做设备、WebGPU 做图形、AudioWorklet 做音频。`,
+        stack: ['TypeScript', 'WebAssembly', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
+      {
+        name: 'ErgalicsStudio',
+        repo: 'ErgalicsStudio',
+        url: 'https://github.com/SnowLeopard-io/ErgalicsStudio',
+        tagline: '浏览器内的科学计算工作站',
+        body: `一个运行在浏览器中的专业科学计算工作台——交互式数据探索、基于 WebGPU/WGSL 的 GPU 计算调度、沙箱插件系统，全部由 Rust/WASM 核心驱动。`,
+        stack: ['TypeScript', 'Rust', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
       {
         name: 'CogitoAgent',
         repo: 'CogitoAgent',
