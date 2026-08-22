@@ -37,27 +37,22 @@
 
 ## 🔧 Technical Capabilities
 
-```
-Layer               | Capabilities
---------------------|--------------------------------------------------------
-Systems             | x86-64 microkernel (PMM, VMM, filesystem, network stack)
-                    | x86→WASM JIT compilation, PE32/PE32+ loader
-                    | Win32 API bridging via trap-stub IAT rewriting
-                    | Assembly, C, low-level debugging, GDI integration
-
-Browser Infra       | WebGPU/WGSL compute pipeline scheduling
-                    | Rust/WASM native core, sandboxed plugin system
-                    | OPFS, WebUSB, AudioWorklet integration
-                    | Cross-origin isolation (COOP/COEP)
-
-AI & Agents         | Autonomous LLM-powered agents with 200+ tools
-                    | Cloud-driven intelligence, local privacy-first execution
-                    | Verifiable autonomy: tool revocation, forget-on-command
-
-Diagnostics         | Node.js runtime analysis via TracingChannel native events
-                    | Heap snapshot & CPU flame graph visualization
-                    | Browser-based, zero-upload architecture
-```
+| Layer | Capabilities |
+|-------|-------------|
+| **Systems** | x86-64 microkernel (PMM, VMM, filesystem, network stack) |
+| | x86→WASM JIT compilation, PE32/PE32+ loader |
+| | Win32 API bridging via trap-stub IAT rewriting |
+| | Assembly, C, low-level debugging, GDI integration |
+| **Browser Infra** | WebGPU/WGSL compute pipeline scheduling |
+| | Rust/WASM native core, sandboxed plugin system |
+| | OPFS, WebUSB, AudioWorklet integration |
+| | Cross-origin isolation (COOP/COEP) |
+| **AI & Agents** | Autonomous LLM-powered agents with 200+ tools |
+| | Cloud-driven intelligence, local privacy-first execution |
+| | Verifiable autonomy: tool revocation, forget-on-command |
+| **Diagnostics** | Node.js runtime analysis via TracingChannel native events |
+| | Heap snapshot & CPU flame graph visualization |
+| | Browser-based, zero-upload architecture |
 
 ---
 
