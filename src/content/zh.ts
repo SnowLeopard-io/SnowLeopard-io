@@ -59,7 +59,7 @@ export const zh: Content = {
   },
 
   stats: [
-    { key: 'repos', value: 4, label: '开源仓库' },
+    { key: 'repos', value: 6, label: '开源仓库' },
     { key: 'stars', value: 0, suffix: '+', label: '获得 Star' },
     { key: 'followers', value: 0, label: '关注者' },
     { key: 'languages', value: 6, label: '编程语言' },
@@ -70,6 +70,24 @@ export const zh: Content = {
     heading: '代表性作品',
     lead: `我拥有与参与的开源项目。每一个都是一次刻意的尝试——构建能长久存在的东西。`,
     projects: [
+      {
+        name: 'SpecterCore',
+        repo: 'SpecterCore',
+        url: 'https://github.com/SnowLeopard-io/SpecterCore',
+        tagline: '在浏览器中运行 Windows x86 应用',
+        body: `一个基于浏览器的 Windows 兼容层，通过 x86→WASM JIT 执行未修改的 PE32/PE32+ 二进制文件，通过 trap-stub IAT 重写拦截 Win32 API 调用，并将其桥接到浏览器原生 API——OPFS 做文件系统、WebUSB 做设备、WebGPU 做图形、AudioWorklet 做音频。`,
+        stack: ['TypeScript', 'WebAssembly', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
+      {
+        name: 'ErgalicsStudio',
+        repo: 'ErgalicsStudio',
+        url: 'https://github.com/SnowLeopard-io/ErgalicsStudio',
+        tagline: '浏览器内的科学计算工作站',
+        body: `一个运行在浏览器中的专业科学计算工作台——交互式数据探索、基于 WebGPU/WGSL 的 GPU 计算调度、沙箱插件系统，全部由 Rust/WASM 核心驱动。`,
+        stack: ['TypeScript', 'Rust', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
       {
         name: 'CogitoAgent',
         repo: 'CogitoAgent',

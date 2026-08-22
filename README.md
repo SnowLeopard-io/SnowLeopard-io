@@ -48,6 +48,8 @@
 
 | Project | Description | Tech Stack | Role |
 |---------|-------------|------------|------|
+| [SpecterCore](https://github.com/SnowLeopard-io/SpecterCore) | A browser-based Windows compatibility layer that executes unmodified PE32/PE32+ binaries through an x86→WASM JIT, intercepts Win32 API calls via trap-stub IAT rewriting, and bridges them onto browser primitives (OPFS, WebUSB, WebGPU, AudioWorklet). | TypeScript, WebAssembly, WebGPU, React | Owner |
+| [ErgalicsStudio](https://github.com/SnowLeopard-io/ErgalicsStudio) | An in-browser scientific computing workstation — interactive data exploration, GPU compute scheduling via WebGPU/WGSL, and a sandboxed plugin system, all powered by a Rust/WASM core. | TypeScript, Rust, WebGPU, React | Owner |
 | [CogitoAgent](https://github.com/SnowLeopard-io/CogitoAgent) | An autonomous AI agent, cloud-driven but locally executed. It continuously thinks, automatically analyzes, and integrates 200+ practical tools — secure and privacy-first. | TypeScript, Node.js, Electron, AI/ML | Owner |
 | [NodeVerdict](https://github.com/SnowLeopard-io/NodeVerdict) | A browser-based Node.js diagnostic viewer that consumes TracingChannel native events, analyzes heap snapshots & CPU flame graphs — all processed locally, nothing uploaded. | TypeScript, React, Vite, D3.js | Owner |
 | [Kil0yOS](https://github.com/Miwafi/Kil0yOS) | A 64-bit x86-64 microkernel operating system with PMM, VMM, filesystem, network stack, and tiling GUI desktop. | C, Assembly | Contributor |

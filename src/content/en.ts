@@ -65,7 +65,7 @@ export const en: Content = {
   },
 
   stats: [
-    { key: 'repos', value: 4, label: 'Repositories' },
+    { key: 'repos', value: 6, label: 'Repositories' },
     { key: 'stars', value: 0, suffix: '+', label: 'Stars earned' },
     { key: 'followers', value: 0, label: 'Followers' },
     { key: 'languages', value: 6, label: 'Languages' },
@@ -76,6 +76,24 @@ export const en: Content = {
     heading: 'Selected work',
     lead: `Open-source projects I own and contribute to. Each one is a deliberate attempt to build something that lasts.`,
     projects: [
+      {
+        name: 'SpecterCore',
+        repo: 'SpecterCore',
+        url: 'https://github.com/SnowLeopard-io/SpecterCore',
+        tagline: 'Run Windows x86 apps in the browser',
+        body: `A browser-based Windows compatibility layer that executes unmodified PE32/PE32+ binaries through an x86→WASM JIT, intercepts Win32 API calls via trap-stub IAT rewriting, and bridges them onto browser primitives — OPFS for files, WebUSB for devices, WebGPU for graphics, AudioWorklet for audio.`,
+        stack: ['TypeScript', 'WebAssembly', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
+      {
+        name: 'ErgalicsStudio',
+        repo: 'ErgalicsStudio',
+        url: 'https://github.com/SnowLeopard-io/ErgalicsStudio',
+        tagline: 'In-browser scientific computing workstation',
+        body: `A professional scientific computing workstation in the browser — interactive data exploration, GPU compute scheduling via WebGPU/WGSL, and a sandboxed plugin system, all powered by a Rust/WASM core.`,
+        stack: ['TypeScript', 'Rust', 'WebGPU', 'React'],
+        role: 'Owner',
+      },
       {
         name: 'CogitoAgent',
         repo: 'CogitoAgent',
