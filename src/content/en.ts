@@ -40,14 +40,14 @@ export const en: Content = {
 
   about: {
     eyebrow: 'About',
-    heading: 'Building autonomous systems, from the kernel up.',
-    lead: `I'm a Grade 12 student at Chongqing No.1 High School who writes software where AI meets systems. I built CogitoAgent — an autonomous AI agent that is cloud-driven for intelligence yet executed locally for privacy — and I contribute to the microkernel OS Kil0yOS and the JVM governance framework LingFrame.`,
+    heading: 'Building systems infrastructure, from the kernel to the browser.',
+    lead: `I'm a Grade 12 student at Chongqing No.1 High School, building systems infrastructure at the intersection of compilers, operating systems, and AI. I created SpecterCore (a browser-based Windows compatibility layer with an x86→WASM JIT), ErgalicsStudio (a WebGPU-accelerated scientific computing workstation), and CogitoAgent (an autonomous AI agent). I also contribute to the microkernel OS Kil0yOS and the JVM governance framework LingFrame.`,
     facts: [
       { label: 'Student', value: 'Chongqing No.1 High School · Grade 12' },
-      { label: 'Building', value: 'CogitoAgent — an autonomous AI agent' },
+      { label: 'Building', value: 'SpecterCore (x86→WASM compat) · ErgalicsStudio (WebGPU compute) · CogitoAgent (AI agent)' },
       { label: 'Contributing', value: 'Kil0yOS (microkernel OS) · LingFrame (JVM governance)' },
-      { label: 'Learning', value: 'Cloud architecture · LLMs · Autonomous systems' },
-      { label: 'Interested in', value: 'AI agents · OS development · Distributed systems' },
+      { label: 'Deepening', value: 'Compiler backends · WebGPU compute · LLM agents · Distributed systems' },
+      { label: 'Focus areas', value: 'Browser-based systems infra · Low-level software · Autonomous agents' },
       { label: 'Based in', value: 'Chongqing, China' },
     ],
     stackLabel: 'Tech stack',

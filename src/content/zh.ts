@@ -34,14 +34,14 @@ export const zh: Content = {
 
   about: {
     eyebrow: '关于',
-    heading: '构建自主系统，从内核到云端。',
-    lead: `我是重庆市第一中学的高三学生，在 AI 与系统软件的交叉地带写代码。我创建了 CogitoAgent——一个云端驱动智能、本地执行以守护隐私的自主 AI 智能体，同时参与微内核操作系统 Kil0yOS 与 JVM 运行时治理框架 LingFrame 的开发。`,
+    heading: '构建系统基础设施，从内核到浏览器。',
+    lead: `我是重庆市第一中学的高三学生，在编译器、操作系统与 AI 的交汇处构建系统基础设施。我创建了 SpecterCore（基于 x86→WASM JIT 的浏览器内 Windows 兼容层）、ErgalicsStudio（WebGPU 加速的科学计算工作站）和 CogitoAgent（自主 AI 智能体），同时参与微内核操作系统 Kil0yOS 与 JVM 运行时治理框架 LingFrame 的开发。`,
     facts: [
       { label: '学生', value: '重庆市第一中学 · 高三' },
-      { label: '正在构建', value: 'CogitoAgent —— 自主 AI 智能体' },
+      { label: '正在构建', value: 'SpecterCore（x86→WASM 兼容层）· ErgalicsStudio（WebGPU 计算）· CogitoAgent（AI 智能体）' },
       { label: '参与贡献', value: 'Kil0yOS（微内核 OS）· LingFrame（JVM 治理）' },
-      { label: '正在学习', value: '云架构 · LLM · 自主系统' },
-      { label: '感兴趣', value: 'AI 智能体 · 操作系统 · 分布式系统' },
+      { label: '深耕领域', value: '编译器后端 · WebGPU 计算 · LLM 智能体 · 分布式系统' },
+      { label: '专注方向', value: '浏览器端系统基础设施 · 底层软件 · 自主智能体' },
       { label: '所在地', value: '中国 · 重庆' },
     ],
     stackLabel: '技术栈',
